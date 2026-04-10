@@ -1,0 +1,323 @@
+.flag-container {
+    display: flex;
+    align-items: center; /* Vertically aligns circle and text */
+    gap: 10px; /* Adds space between circle and text */
+}
+
+.flag {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+
+  /* borde tipo pin */
+  border: 2px solid #bdbdbd;
+
+  /* profundidad */
+  box-shadow:
+    0 5px 10px rgba(0,0,0,0.35),
+    inset 0 1px 2px rgba(255,255,255,0.6);
+}
+
+/* brillo superior */
+.flag::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:50%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,.85) 0%,
+    rgba(255,255,255,.35) 35%,
+    rgba(255,255,255,0) 60%
+  );
+  pointer-events:none;
+}
+
+/* sombra inferior */
+.flag::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:50%;
+  background: radial-gradient(
+    circle at 50% 140%,
+    rgba(0,0,0,.18),
+    transparent 65%
+  );
+  pointer-events:none;
+}
+
+/* animación (queda MUY linda en cards) */
+.flag:hover{
+  transform: translateY(-3px) scale(1.06);
+  transition: .25s ease;
+  box-shadow:
+    0 12px 20px rgba(0,0,0,0.45),
+    inset 0 1px 3px rgba(255,255,255,0.8);
+}
+
+
+.custom-clickable-card {
+  position: relative;
+  /* Add other card styles (padding, border, etc.) */
+}
+
+.card-link-target {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  /* Hide the actual link text visually if desired, but ensure accessibility */
+}
+
+/* Optional: Add hover effect to the card to indicate clickability */
+.custom-clickable-card:hover {
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+
+.francia{
+  background: linear-gradient(90deg,
+    #0055A4 0%, #0055A4 33.33%,
+    #FFFFFF 33.33%, #FFFFFF 66.66%,
+    #EF4135 66.66%, #EF4135 100%);
+}
+
+.belgica {
+  background: linear-gradient(90deg, 
+    #000000 0%, #000000 33.33%, 
+    #FFE135 33.33%, #FFE135 66.66%, 
+    #ED2939 66.66%, #ED2939 100%);
+}
+.alemania{
+  background: linear-gradient(to bottom,
+    #000000 0%, #000000 33.33%,
+    #DD0000 33.33%, #DD0000 66.66%,
+    #FFCE00 66.66%, #FFCE00 100%);
+}
+
+.espana{
+  background: linear-gradient(to bottom,
+    #AA151B 0%, #AA151B 25%,
+    #F1BF00 25%, #F1BF00 75%,
+    #AA151B 75%, #AA151B 100%);
+}
+
+.belgica{
+  background: linear-gradient(90deg,
+    #2D2926 0%, #2D2926 33.33%,
+    #FFCD00 33.33%, #FFCD00 66.66%,
+    #C8102E 66.66%, #C8102E 100%);
+}
+
+.holanda{
+  background: linear-gradient(to bottom,
+    #AE1C28 0%, #AE1C28 33.33%,
+    #FFFFFF 33.33%, #FFFFFF 66.66%,
+    #21468B 66.66%, #21468B 100%);
+}
+
+.canada{
+background: linear-gradient(
+    to right,
+    #C8102E 0%, #C8102E 33.33%,
+    #FFFFFF 33.33%, #FFFFFF 66.66%,
+    #C8102E 66.66%, #C8102E 100%
+  );
+}
+
+.ab {
+    padding: 8px;
+}
+
+#topBtn, #bottomBtn {
+    display: none; /* Ocultar por defecto, JavaScript los mostrará/ocultará */
+    position: fixed; /* Posición fija en la pantalla */
+    bottom: 20px; /* Separación del borde inferior */
+    right: 30px; /* Separación del borde derecho */
+    z-index: 99; /* Asegurar que estén por encima de otros elementos */
+    border: none;
+    outline: none;
+    background-color: #EC0D0D; /* Color de fondo */
+    color: white; /* Color del texto */
+    cursor: pointer; /* Cambiar cursor a "mano" */
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+#topBtn {
+    bottom: 80px; /* Posicionarlo por encima del botón de "Principio" */
+}
+
+#topBtn:hover {
+    background-color: #ED2E38; /* Efecto hover */
+}
+
+
+.city-flag{
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;  /* mejor que 20%: siempre queda consistente */
+    position: relative;
+    overflow: hidden;
+
+    border: 1px solid #bdbdbd;
+
+    /* relieve */
+    box-shadow:
+        0 2px 4px rgba(0,0,0,0.35),
+        inset 0 1px 1px rgba(255,255,255,0.6);
+}
+
+.city-flag::before{
+    background: linear-gradient(
+        to bottom,
+        rgba(255,255,255,.55) 0%,
+        rgba(255,255,255,.18) 40%,
+        rgba(255,255,255,0) 70%
+    );
+}
+
+/* sombra inferior */
+.city-flag::after{
+    background: radial-gradient(
+        circle at 50% 140%,
+        rgba(0,0,0,.18),
+        transparent 65%
+    );
+}
+
+
+.flag, .city-flag {
+    filter: saturate(1.5) contrast(1.15) brightness(1.05);
+}
+
+/* brillo superior más intenso */
+.flag::before, .city-flag::before {
+    background: linear-gradient(
+        to bottom,
+        rgba(255,255,255,.95) 0%,
+        rgba(255,255,255,.45) 35%,
+        rgba(255,255,255,0) 60%
+    );
+}
+
+
+/* mini hover (queda MUY lindo en listas) */
+.city-flag:hover{
+    transform: scale(1.15);
+    transition: .18s ease;
+}
+
+
+ .frankfurt-flag {
+      width: 30px; /* Example size */
+      height: 30px;
+      border-radius: 20%;  
+      background: linear-gradient(
+          to bottom, 
+          #ffffff 0%, #ffffff 50%, 
+          #dd0216 50%, #dd0216 100%
+      );
+  border: 1px solid #ccc; /* Opcional: borde para visualizarla */
+}
+
+.rothenburg-flag{
+      width: 30px; /* Example size */
+      height: 30px;
+      border-radius: 20%;  
+     background: linear-gradient(
+        to bottom,
+        #c8102e 0%, #c8102e 50%,
+        #ffffff 50%, #ffffff 100%
+    );
+    border: 1px solid #ccc; /* Opcional: borde para visualizarla */
+}
+
+.nuremberg-flag{
+     width: 30px;
+    height: 30px;
+    border-radius: 20%;
+    background: linear-gradient(
+        to bottom,
+        #b3001b 0%, #b3001b 50%,
+        #ffffff 50%, #ffffff 100%
+    );
+    border: 1px solid #ccc;
+}
+
+.dresden-flag{
+      width: 30px; /* Example size */
+      height: 30px;
+      border-radius: 20%;  
+    background: linear-gradient(
+        to bottom,
+        #ffd100 0%, #ffd100 50%,
+        #000000 50%, #000000 100%
+    );
+}
+
+.berlin-flag{
+      width: 30px; /* Example size */
+      height: 30px;
+      border-radius: 20%;  
+    background: linear-gradient(
+        to bottom,
+        #d50000 0%, #d50000 25%,
+        #ffffff 25%, #ffffff 75%,
+        #d50000 75%, #d50000 100%
+    );
+}
+
+
+.city-link{
+    text-decoration: none;
+    display:block;
+    border-radius:12px;
+    padding:6px;
+    transition: all .18s ease;
+}
+
+.city-link:hover{
+    background:#2b2f36;
+    transform:scale(1.02);
+}
+
+
+
+
+.flag-text{
+    font-size:15px;
+}
+
+
+.city-row{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:6px 0;
+}
+
+.city-link:hover{
+  background: rgba(255,255,255,0.06);
+  border-radius:8px;
+  padding-left:6px;
+  transition:.15s;
+}
+
+.custom-clickable-card:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,.35);
+  transition:.2s;
+}
+
+.city-flag{
+    filter: saturate(1.25) contrast(1.05);
+}
