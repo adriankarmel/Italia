@@ -1,3 +1,7 @@
+body{
+  background:black;
+}
+
 .flag-container {
     display: flex;
     align-items: center; /* Vertically aligns circle and text */
@@ -82,58 +86,23 @@
 }
 
 
+.ab {
+    padding: 8px;
+}
+
+.italia{
+  background: linear-gradient(90deg,    
+    #008C45 0%, #008C45 33.33%,
+    #F4F5F0 33.33%, #F4F5F0 66.66%,
+    #CD212A 66.66%, #CD212A 100%
+  );
+}
+
 .francia{
   background: linear-gradient(90deg,
     #0055A4 0%, #0055A4 33.33%,
     #FFFFFF 33.33%, #FFFFFF 66.66%,
     #EF4135 66.66%, #EF4135 100%);
-}
-
-.belgica {
-  background: linear-gradient(90deg, 
-    #000000 0%, #000000 33.33%, 
-    #FFE135 33.33%, #FFE135 66.66%, 
-    #ED2939 66.66%, #ED2939 100%);
-}
-.alemania{
-  background: linear-gradient(to bottom,
-    #000000 0%, #000000 33.33%,
-    #DD0000 33.33%, #DD0000 66.66%,
-    #FFCE00 66.66%, #FFCE00 100%);
-}
-
-.espana{
-  background: linear-gradient(to bottom,
-    #AA151B 0%, #AA151B 25%,
-    #F1BF00 25%, #F1BF00 75%,
-    #AA151B 75%, #AA151B 100%);
-}
-
-.belgica{
-  background: linear-gradient(90deg,
-    #2D2926 0%, #2D2926 33.33%,
-    #FFCD00 33.33%, #FFCD00 66.66%,
-    #C8102E 66.66%, #C8102E 100%);
-}
-
-.holanda{
-  background: linear-gradient(to bottom,
-    #AE1C28 0%, #AE1C28 33.33%,
-    #FFFFFF 33.33%, #FFFFFF 66.66%,
-    #21468B 66.66%, #21468B 100%);
-}
-
-.canada{
-background: linear-gradient(
-    to right,
-    #C8102E 0%, #C8102E 33.33%,
-    #FFFFFF 33.33%, #FFFFFF 66.66%,
-    #C8102E 66.66%, #C8102E 100%
-  );
-}
-
-.ab {
-    padding: 8px;
 }
 
 #topBtn, #bottomBtn {
