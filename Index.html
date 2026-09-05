@@ -33,10 +33,10 @@
                         <a class="nav-link" href="roma.html">Roma</a>
                     </li>		  
                     <li class="nav-item">
-                        <a class="nav-link" href="napoli.html">Napoli</a>
+                        <a class="nav-link" href="salerno.html">Salerno</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="vaticano.html">Vaticano</a>
+                        <a class="nav-link" href="napoli.html">Napoli</a>
                     </li>          
                 </ul>      
                 </div>
@@ -49,8 +49,8 @@
                     <div class="card-body"> 
                     <div class="cuenta-atras">                         
                         <div class="grupo"> 
-                        <p class="grande" id="dias">00</p> 
-                        <p class="chico">Días</p> 
+                            <p class="grande" id="dias">00</p> 
+                            <p class="chico">Días</p> 
                         </div> 
                         
                         <div class="grupo"> 
@@ -125,6 +125,20 @@
                     </div>
                 </div>
             </a>     
+            <a href="salerno.html" class="text-decoration-none">
+                <div class="card custom-clickable-card mb-3" style="border: 1px solid #d3d3d3;">
+                    <div class="card-body">
+                        <div class="flag-container">
+                       <img src="./img/salernitana-logo.svg" style="width: 50px;height:50px;border-radius: 15px;">
+                        <span class="flag-text text-light-emphasis">
+                            Salerno <br>
+                            <small>Miercoles 14/4/2027</small>
+                            <small></small>
+                        </span>
+                        </div>
+                    </div>
+                </div>
+            </a>   
             <a href="napoli.html" class="text-decoration-none">
                 <div class="card custom-clickable-card mb-3" style="border: 1px solid #d3d3d3;">
                     <div class="card-body">
@@ -166,23 +180,7 @@
                         </div>
                     </div>
                 </div>
-            </a>  
-            
-            
-            <a href="amalfi.html" class="text-decoration-none">
-                <div class="card custom-clickable-card mb-3" style="border: 1px solid #d3d3d3;">
-                    <div class="card-body">
-                        <div class="flag-container">
-                       <img src="./img/salernitana-logo.svg" style="width: 50px;height:50px;border-radius: 15px;">
-                        <span class="flag-text text-light-emphasis">
-                            Salerno <br>
-                            <small>Sábado 24/4/2027</small>
-                            <small>Lunes 26/4/2027</small>
-                        </span>
-                        </div>
-                    </div>
-                </div>
-            </a>    
+            </a>               
         </div>  
 
         
@@ -286,7 +284,8 @@
 <script>
 function actualizarDiferencia() {
             const ahora = new Date();
-            const fechaObjetivo = new Date(2027, 3, 8, 17, 0, 0).getTime();
+            //const fechaObjetivo = new Date(2027, 3, 8, 17, 0, 0).getTime();
+            const fechaObjetivo = new Date(2026, 8, 5, 7, 57, 0).getTime();
             // Diferencia en milisegundos
             const diferencia = fechaObjetivo - ahora;
 
